@@ -1,0 +1,38 @@
+.title{
+	background-color:#2B2B2B;
+	color: #ebebeb;
+	font-family:'Oswald',sans-serif;
+	font-size:2rem;
+	text-transform:uppercase;
+	height:200px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.wrapper{
+	margin:20px;
+	width:auto;
+	display:flex;
+	height:500px;
+	position:relative;
+}
+.content{
+	position:absolute;
+	top:0;left:0;right:0;bottom:0;
+	margin:auto;
+	border:1px solid black;
+	width:70%;
+	height:auto;
+}
+.comments{
+	height:70%;
+	width:100%;
+	position:absolute;
+}
+.editor{
+	height:30%;
+	width:100%;
+	bottom:0;
+	border:1px solid black;
+	position:absolute;
+}
