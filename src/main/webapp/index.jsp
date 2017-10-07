@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta name="viewport" content="initial-scale=1.0,width=device-width" />
-    <title>websocket简易聊天室</title>
+    <title>websocket简易聊天室</title>   
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -17,6 +17,7 @@
 			</div>
 			<div class="editor">
 				<input id="text" type="text"/>
+				<iframe id = "mytext" name="text" style="height:30px;width:500px;" src="richTextarea.jsp"></iframe>
 				<button onclick="send()">发送消息</button>		  
 			    <button onclick="closeWebSocket()">关闭连接</button>
 			</div>
