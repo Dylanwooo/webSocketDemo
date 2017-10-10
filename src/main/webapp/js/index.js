@@ -1,4 +1,4 @@
-var EventUtil = {
+/*var EventUtil = {
     addHandler: function (element, type, handler) {
         if (element.addEventListener) {
             element.addEventListener(type, handler, false);
@@ -49,23 +49,21 @@ var EventUtil = {
 
     }
 
-}
+}*/
    
 	var websocket = null;
     //判断当前浏览器是否支持WebSocket
     if ('WebSocket' in window) {
-        websocket = new WebSocket("ws://192.168.1.101:8080/webSocketMaven/websocket");
+        websocket = new WebSocket("ws://localhost:8080/webSocketMaven/websocket");
     }
     else {
         alert('当前浏览器 Not support websocket')
     }
-    
-  
-    
-    EventUtil.addHandler(window,"load",function(){
+       
+    /*EventUtil.addHandler(window,"load",function(){
         	frames["text"].document.designMode = "on";
         	frames["text"].document.execCommand("bold",false,null);
-    })
+    })*/
     
     //连接发生错误的回调方法
     websocket.onerror = function () {
@@ -102,10 +100,10 @@ var EventUtil = {
     function closeWebSocket() {
         websocket.close();
     }
-    
     //发送消息
     function send() {
     	var message = document.getElementById('text').value;
         websocket.send(message);
+        document.getElementById('text').value = '';      //清空输入框内容
     }
     

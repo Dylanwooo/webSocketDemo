@@ -14,12 +14,15 @@
 		<div class="content"> 
 			<div class="comments">
 				<div id="message"></div>
-			</div>
+			</div>			
 			<div class="editor">
-				<input id="text" type="text"/>
-				<iframe id = "mytext" name="text" style="height:30px;width:500px;" src="richTextarea.jsp"></iframe>
-				<button onclick="send()">发送消息</button>		  
-			    <button onclick="closeWebSocket()">关闭连接</button>
+				<hr />
+				<input id="text" type="text"/>		
+				<div id="btnArea">
+					<button class="sendMsg" onclick="send()">发送消息</button>		  
+			    	<button class="closeCnt" onclick="closeWebSocket()">关闭连接</button>
+				</div>
+				
 			</div>
 		</div>
 	</div>
